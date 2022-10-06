@@ -1,0 +1,492 @@
+:root{
+    --head-text-color: hsl(229, 31%, 21%);
+    --body-text-color: hsl(229, 8%, 60%);
+    --fox-button-color: hsl(229, 8%, 90%);
+    --fox-button: hsl(252, 30%, 95%);
+
+    --focus-blue-color: hsl(231, 69%, 60%);
+    --focus-red-color: hsl(0, 94%, 66%);
+
+    --font-size: 16px;
+    --font-family: 'Rubik', sans-serif;
+
+}
+
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* General Styling */
+body{
+    color: var(--body-text-color);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: 1.4;
+}
+
+a{
+    color: var(--head-text-color);
+}
+
+a:focus,
+a:hover {
+    color: var(--focus-red-color);
+}
+
+small {
+    font-size: 11px;
+}
+
+/* Styling for the header and navbar */
+ header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    z-index: 10;
+    background-color: white;
+    padding: 4rem 16rem;
+    
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.bar {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 4.5rem;
+}
+.bar ul {
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.bar button {
+    background-color: var(--focus-red-color);
+    color: white;
+    padding: 0.8rem 2.7rem;
+    border: 0;
+    border-radius: 0.59rem;
+    cursor: pointer;
+    border: 2px solid var(--focus-red-color);
+}
+.bar button:hover,
+.bar button:focus{
+    background-color: white;
+    color: var(--focus-red-color);
+    border: 2px solid var(--focus-red-color);
+}
+
+
+/* styling of the hero section */
+.hero-section{
+    margin-top: 19rem;
+    position: relative;
+    max-height: 40rem;
+    overflow-x: hidden;
+}
+.hero-container {
+    width: 1194px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+}
+.hero-bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 490px;
+    height: 306px;
+    background-color: var(--focus-blue-color);
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    z-index: -1;
+}
+
+.text-area {
+    width: 479px;
+}
+.text-area h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.text-area p {
+    margin-bottom: 1.5rem;
+}
+.hero-image {
+    width: 520px;
+}
+.button {
+    padding: 0.8rem 2.7rem;
+    border: 0;
+    border-radius: 0.59rem;
+}
+.chrome-btn {
+    background-color: var(--focus-blue-color);
+    color: white;
+    margin-right: 1rem;
+    border: 2px solid var(--focus-blue-color);
+    cursor: pointer;
+}
+.chrome-btn:hover,
+.chrome-btn:focus {
+    background-color: white;
+    color: var(--focus-blue-color);
+    border: 2px solid var(--focus-blue-color);
+}
+.fox-button {
+    background-color: var(--fox-button);
+    color: var(--head-text-color);
+    box-shadow: 0 4px 6px var(--fox-button-color);
+    border: 2px solid var(--fox-button);
+    cursor: pointer;
+}
+.fox-button:hover,
+.fox-button:focus {
+    background-color: white;
+    color: var(--focus-red-color);
+    border: 2px solid var(--focus-red-color);
+}
+
+
+
+/* styling for features */
+.features {
+    text-align: center;
+    width: 540px;
+    margin: 2rem auto 0;
+}
+.features h2 {
+    margin-bottom: 2rem;
+}
+
+/* styling for tabbed component */
+.tabbed-component {
+    height: 65vh;
+}
+.tabbed-heading {
+    position: relative;
+    width: 730px;
+    margin: 2rem auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    /* border-bottom: 2px solid var(--fox-button-color); */
+}
+.horizontal-line {
+    position: relative;
+    width: 730px;
+    height: 2px;
+    background-color: var(--fox-button-color);
+    margin: 0 auto;
+}
+.active-tab{
+    position: absolute;
+    /* padding-bottom: 1rem; */
+    /* border-bottom: 2.5px solid var(--focus-red-color); */
+    width: 180px;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--focus-red-color);
+    border-radius: 3px;
+}
+.tabbed-body{
+    position: relative;
+    margin-top: 5rem;
+}
+.tabbed-body-bg{
+    position: absolute;
+    top: 7rem;
+    background-color: var(--focus-blue-color);
+    width: 460px;
+    height: 276px;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+}
+.tabbed-items {
+    position: relative;
+}
+.tabbed-item {
+    position: absolute;
+    left: 9.4rem;
+    width: 1096px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+}
+.tabbed-image{
+    width: 430px;
+    height: 320px;
+    margin-bottom: 2rem;
+}
+.tabbed-text{
+    width: 430px;
+    margin-left: 3rem;
+}
+.tabbed-text h2{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.tabbed-text p {
+    margin-bottom: 2rem;
+}
+
+#item-2{
+    display: none;
+}
+#item-3{
+    display: none;
+}
+
+
+/* styling for extensions */
+.extension-section {
+    width: 900px;
+    margin: 0 auto 7rem;
+}
+.text-extension {
+    text-align: center;
+    width: 540px;
+    margin: 2rem auto 0;
+}
+.text-extension h2 {
+    margin-bottom: 2rem;
+}
+.card-extensions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.9rem;
+    margin-top: 2rem;
+}
+.extension-card {
+    display: grid;
+    justify-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 5px var(--body-text-color);
+}
+.extension-card .extension-image {
+    margin-bottom: 2rem;
+}
+.extension-card .doted-bg {
+    margin-top: 2rem;
+}
+.extension-card h3{
+    margin-bottom: 0.5rem;
+}
+.extension-button {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border: 2px solid var(--focus-blue-color);
+    cursor: pointer;
+}
+.extension-button:focus{
+    background-color: white;
+    color: var(--focus-blue-color);
+    border: 2px solid var(--focus-blue-color);
+}
+.card-2 {
+    margin-top: 3rem;
+    margin-bottom: -4rem;
+}
+.card-3 {
+    margin-bottom: -7rem;
+    margin-top: 6rem;
+}
+
+/* styling for faq-section */
+.faq-section{
+    width: 540px;
+    margin: 10rem auto;
+}
+.faq-text-area{
+    text-align: center;
+}
+.faq-text-area h2{
+    margin-bottom: 2rem;
+}
+.faq-text-area p{
+    margin-bottom: 2.5rem;
+}
+.accordion-item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--fox-button-color);
+    transition: all 5s ease;
+}
+.accordion-question {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faq-icon{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.faq-icon i {
+    font-size: 2.7rem;
+}
+
+.accordion-item .tertiary-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.accordion-item .tertiary-header:hover{
+    color: var(--focus-red-color);
+}
+.faq-icon .icon-open {
+    transform: rotate(180deg);
+    color: var(--focus-red-color);
+}
+.accordion-answer {
+    height: 0;
+    overflow: hidden;
+    /* transition: all 5s ease; */
+}
+.accordion-answer.active{
+    height: fit-content;
+}
+.faq-section button{
+    margin-top: 3rem;
+    display: grid;
+    align-items: center;
+    justify-self: center;
+
+}
+
+
+/* SUSCRIBE SECTION */
+.suscribe{
+    background-color: var(--focus-blue-color);
+    color: white;
+}
+.suscribe-container {
+    width: 440px;
+    margin: 0 auto;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+.suscribe input{
+    outline: 0;
+    border: none;
+    padding: 0.8rem 2rem;
+    width: 250px;
+    border-radius: 0.4rem;
+    /* margin-right: 1rem; */
+}
+
+.suscribe p{
+    margin-bottom: 2rem;
+}
+.suscribe h2{
+    margin-bottom: 2.5rem;
+}
+
+
+/* footer styling */
+footer {
+    background-color: var(--head-text-color);
+    color: white;
+    text-transform: uppercase;
+    padding: 2rem;
+}footer a{
+    color: white;
+}
+.footer-image{
+    background-color: white;
+}
+
+.footer-nav{
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 3.5rem;
+}
+footer ul {
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+    align-items: center;
+}
+footer .social-links {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 2rem;
+}
+/* utilty classes */
+.primary-header {
+    font-size: 3.5rem;
+    color: var(--head-text-color);
+    font-weight: 500;
+    line-height: 1.4;
+}
+.secondary-header {
+    font-size: 2.5rem;
+    color: var(--head-text-color);
+    font-weight: 500;
+}
+.tertiary-header {
+    font-size: 1.6rem;
+    color: var(--head-text-color);
+    font-weight: 500;
+}
+.suscribe-header {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 500;
+}
+.contact-button {
+    padding: 0.8rem 2.7rem;
+    border: 0;
+    border-radius: 0.59rem;
+    background-color: var(--focus-red-color);
+    color: white;
+}
+
+.blue-button {
+    padding: 0.8rem 2.7rem;
+    border: 0;
+    border-radius: 0.59rem;
+    background-color: var(--focus-blue-color);
+    color: white;
+}
+.suscribe-number{
+    text-transform: uppercase;
+}
