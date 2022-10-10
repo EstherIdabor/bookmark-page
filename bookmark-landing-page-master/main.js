@@ -21,7 +21,7 @@ const barTracker = document.querySelector('.active-tab')
 headerContainer.addEventListener('click', (e) => {
     // console.log(e.target)
     if(e.target.dataset.num){
-        console.log(e.target.dataset.num)
+        
         const targetNum = e.target.dataset.num
         
         featureHeaders.forEach(featureHeader => {
