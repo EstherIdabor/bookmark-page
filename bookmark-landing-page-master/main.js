@@ -1,3 +1,16 @@
+// Creating a menu-bar
+const navMobile = document.querySelector('.nav-mobile')
+const navClose = document.querySelector('.nav-close')
+const navOpen = document.querySelector('.nav-open-icon')
+
+navClose.addEventListener('click', () => {
+    navMobile.style.transform = `translateY(-200%)`
+})
+navOpen.addEventListener('click', () => {
+    navMobile.style.transform = `translateY(0)`
+})
+
+
 // creating a tabbed component
 const headerContainer = document.querySelector('.tabbed-heading')
 const featureHeaders = document.querySelectorAll('.feature-header')
@@ -40,10 +53,10 @@ accordionItems.forEach(accordionItem => {
         
         //  console.log(iconOpen.classList)
         if(iconOpen.classList.contains('icon-open')){
-            accordionAnswers.classList.add('active')
+            accordionAnswers.style.height = accordionAnswers.scrollHeight + 'px'
         }
         else{
-            accordionAnswers.classList.remove('active')
+            accordionAnswers.style.height = 0
         }
 
     })
